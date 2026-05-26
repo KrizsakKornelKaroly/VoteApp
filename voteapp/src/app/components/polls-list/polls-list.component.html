@@ -1,0 +1,18 @@
+<div class="p-3">
+    <h2>Szavazások</h2>
+
+    <div class="row justify-content-center">
+        <div class="card gap-2 col-8 col-md-6 col-lg-3" *ngFor="let poll of polls">
+            <div class="card-body">
+                <h5 class="card-title">{{ poll.title }}</h5>
+                <p class="card-text">Létrehozva: {{ poll.created_at | date:'medium' }}</p>
+                <a class="btn btn-primary px-4 mx-2"
+                (click)="openPoll(poll.id)">Megnyitás</a>
+                <a class="btn btn-secondary px-4 mx-2" (click)="showPollResults(poll.id)">Eredmények</a>
+                <a class="btn btn-danger px-4 mx-2" (click)="deletePoll(poll.id)">Törlés</a>
+            </div>
+        </div>
+
+    </div>
+
+</div>

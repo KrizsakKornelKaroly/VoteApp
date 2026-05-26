@@ -1,0 +1,27 @@
+<div class="p-3">
+    <h2>Szavazás eredményei</h2>
+    <Button class="btn btn-primary" (click)="goBack()">Vissza</Button>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <td>Opció</td>
+                <td>Szavazatok</td>
+                <td>Arány</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let option of pollStats">
+                <td>{{ option.name }}</td>
+                <td>{{ option.vote_count }}</td>
+                <td>
+                    <div class="progress" role="progressbar" aria-label="Basic example"
+                     aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar" style="width: 50%"></div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

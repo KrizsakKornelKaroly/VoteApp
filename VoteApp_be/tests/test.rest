@@ -1,0 +1,45 @@
+### GET POLLS
+GET http://localhost:3000/api/polls
+Content-Type: application/json
+
+
+### POST POLL
+POST http://localhost:3000/api/polls
+Content-Type: application/json
+
+{
+    "title": "New Poll"
+}
+
+### DELETE POLL
+DELETE http://localhost:3000/api/polls/1
+Content-Type: application/json
+
+### GET POLL OPTIONS
+GET http://localhost:3000/api/polls/7/options
+Content-Type: application/json
+
+### POST POLL OPTION
+POST http://localhost:3000/api/options
+Content-Type: application/json
+
+{
+    "poll_id": 7,
+    "name": "New Option"
+}
+
+### DELETE POLL OPTION
+DELETE http://localhost:3000/api/options/1
+Content-Type: application/json
+
+### POST VOTE
+POST http://localhost:3000/api/votes
+Content-Type: application/json
+
+{
+    "option_id": 2
+}
+
+### GET VOTE STATS
+GET http://localhost:3000/api/polls/6/stats
+Content-Type: application/json
